@@ -141,9 +141,9 @@ def read_race_examples(paths):
                             context_sentence = article,
                             start_ending = question,
                             ending_0 = options[0],
-                            ending_1,
-                            ending_2,
-                            ending_3,
+                            ending_1=ending_1,
+                            ending_2=ending_2,
+                            ending_3=ending_3,
                             label = truth))
                             
                 

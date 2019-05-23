@@ -126,23 +126,26 @@ def read_race_examples(paths):
                     truth = ord(data_raw['answers'][i]) - ord('A')
                     question = data_raw['questions'][i]
                     options = data_raw['options'][i]
+                    try:
+                              ending_1 = options[1],
+                              ending_2 = options[2],
+                              ending_3 = options[3],
+                              label = truth))
+                    except:
+                              print(ending_0)
+                              ending_1 = '',
+                              ending_2 = '',
+                              ending_3 = '',
                     examples.append(
                         RaceExample(
                             race_id = filename+'-'+str(i),
                             context_sentence = article,
                             start_ending = question,
-
                             ending_0 = options[0],
-                            try:
-                              ending_1 = options[1],
-                              ending_2 = options[2],
-                              ending_3 = options[3],
-                              label = truth))
-                            except:
-                              print(ending_0)
-                              ending_1 = '',
-                              ending_2 = '',
-                              ending_3 = '',
+                            ending_1,
+                            ending_2,
+                            ending_3
+                            )
                 
     return examples 
 

@@ -76,8 +76,8 @@ class RaceExample(object):
 
     def __repr__(self):
         l = [
-            f"id: {self.race_id}",
-            f"article: {self.context_sentence}",
+            f"id:{self.race_id}",
+            f"article:{self.context_sentence}",
             f"question: {self.start_ending}",
             f"option_0: {self.endings[0]}",
             f"option_1: {self.endings[1]}",
